@@ -150,6 +150,8 @@
 
 
 
+
+
   - [x] 6.1 Create Hero component
 
     - Display headline "Crafted with Love, Just for You"
@@ -158,14 +160,25 @@
     - Add decorative background pattern or gradient
     - _Requirements: 2.1_
 
-  - [ ] 6.2 Add Hero CTAs and product preview
+  - [x] 6.2 Add Hero CTAs and product preview
+
+
+
+
     - Implement primary CTA button linking to products section
     - Implement secondary CTA button linking to contact section
     - Add product preview images on desktop layout
     - _Requirements: 2.2, 2.3, 2.4, 2.5_
 
-- [ ] 7. Build About section
-  - [ ] 7.1 Create About component
+- [x] 7. Build About section
+
+
+
+
+
+
+  - [x] 7.1 Create About component
+
     - Display headline "Our Story & Craft" or "Handmade with Love & Care"
     - Include brand story content about handmade quality
     - Add gratitude message about customer support
