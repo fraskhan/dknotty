@@ -68,7 +68,12 @@
 
 
     - _Requirements: 2.2, 2.3, 10.2_
-  - [ ] 3.2 Create Card component
+  - [x] 3.2 Create Card component
+
+
+
+
+
     - Implement cream background with rounded corners
 
 
