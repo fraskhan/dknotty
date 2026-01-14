@@ -32,14 +32,23 @@
     - Set up globals.css with base styles and smooth scroll behavior
     - _Requirements: 10.4_
 
-- [ ] 2. Create constants and utility files
-  - [ ] 2.1 Create lib/constants.ts with brand data
+- [x] 2. Create constants and utility files
+
+
+
+
+
+
+  - [x] 2.1 Create lib/constants.ts with brand data
+
     - Define BRAND object with name, tagline, location, contact info
     - Define COLORS object with hex values
     - Define NAV_ITEMS array for navigation
     - Define placeholder PRODUCTS and REVIEWS arrays
     - _Requirements: 5.2, 5.3, 5.4, 5.5, 5.6_
-  - [ ] 2.2 Create lib/utils.ts with helper functions
+
+  - [x] 2.2 Create lib/utils.ts with helper functions
+
     - Implement cn() utility for className merging using clsx and tailwind-merge
     - _Requirements: 10.4_
 
