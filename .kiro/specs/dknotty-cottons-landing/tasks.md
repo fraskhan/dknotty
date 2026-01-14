@@ -143,13 +143,21 @@
     - Handle body scroll lock when menu is open
     - _Requirements: 1.3, 1.4_
 
-- [ ] 6. Build Hero section
-  - [ ] 6.1 Create Hero component
+- [x] 6. Build Hero section
+
+
+
+
+
+
+  - [x] 6.1 Create Hero component
+
     - Display headline "Crafted with Love, Just for You"
     - Display subheadline about custom crochet creations
     - Show location "Zamboanga City"
     - Add decorative background pattern or gradient
     - _Requirements: 2.1_
+
   - [ ] 6.2 Add Hero CTAs and product preview
     - Implement primary CTA button linking to products section
     - Implement secondary CTA button linking to contact section
