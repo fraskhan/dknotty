@@ -7,6 +7,8 @@ import {
   FacebookIcon,
   EmailIcon,
   PhoneIcon,
+  LocationIcon,
+  WebsiteIcon,
 } from "@/components/icons/SocialIcons";
 
 export function Footer() {
@@ -24,6 +26,18 @@ export function Footer() {
       label: "Phone",
       value: BRAND.phone,
       href: `tel:${BRAND.phone.replace(/-/g, "")}`,
+    },
+    {
+      icon: <WebsiteIcon size={18} className="text-brand-cream" />,
+      label: "Website",
+      value: BRAND.website,
+      href: `https://${BRAND.website}`,
+    },
+    {
+      icon: <LocationIcon size={18} className="text-brand-cream" />,
+      label: "Location",
+      value: BRAND.location,
+      href: "#",
     },
   ];
 

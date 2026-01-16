@@ -269,7 +269,13 @@
 
 
 
-  - [ ] 11.1 Create Footer component
+
+
+  - [x] 11.1 Create Footer component
+
+
+
+
     - Display business name and tagline
     - Include all contact information with clickable links
     - Add social media icon links
