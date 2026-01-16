@@ -12,7 +12,8 @@ import {
 } from "@/components/icons/SocialIcons";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  // Use static year to avoid hydration mismatch
+  const currentYear = 2026;
 
   const contactLinks = [
     {
