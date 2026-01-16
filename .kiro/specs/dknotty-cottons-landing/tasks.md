@@ -219,7 +219,12 @@
     - Show website URL
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6_
 
-  - [ ] 9.2 Create ContactForm component
+  - [x] 9.2 Create ContactForm component
+
+
+
+
+
     - Implement form with name, email, message fields
     - Add client-side validation for required fields
     - Add email format validation
@@ -228,14 +233,23 @@
     - Console.log submission for MVP
     - _Requirements: 6.1, 6.2, 6.3, 6.4_
 
-- [ ] 10. Build Reviews section with QR code
-  - [ ] 10.1 Create Reviews component
+- [x] 10. Build Reviews section with QR code
+
+
+
+
+
+
+  - [x] 10.1 Create Reviews component
+
     - Display headline "Customer Love"
     - Create ReviewCard component for testimonials
     - Display minimum 2 placeholder review cards
     - Add star rating display
     - Include "Please leave a review ★★★★★" call-to-action
     - _Requirements: 7.1, 7.2, 7.4_
+
+
   - [ ] 10.2 Implement QR code component
     - Install and configure qrcode.react library
     - Create QRCode component with "Scan Me" label
