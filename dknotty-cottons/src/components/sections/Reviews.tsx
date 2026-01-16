@@ -66,8 +66,8 @@ export function Reviews() {
       </div>
 
       {/* Call to Action with QR Code */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-        <div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="text-center md:text-right">
           <p className="text-lg text-brand-brown font-medium mb-2">
             Loved your purchase?
           </p>
