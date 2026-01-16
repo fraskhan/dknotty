@@ -38,6 +38,7 @@ export function About() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -54,8 +55,8 @@ export function About() {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             {/* Background decorative circles */}
-            <div className="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-brand-light-brown/20 blur-xl" />
-            <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-brand-soft-blue/20 blur-xl" />
+            <div className="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-brand-light-brown/20 blur-xl" aria-hidden="true" />
+            <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-brand-soft-blue/20 blur-xl" aria-hidden="true" />
             
             {/* Main decorative card with logo */}
             <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-lg">
@@ -71,7 +72,7 @@ export function About() {
                 </div>
                 
                 {/* Decorative yarn elements */}
-                <div className="flex gap-2">
+                <div className="flex gap-2" aria-hidden="true">
                   <div className="w-3 h-3 rounded-full bg-brand-light-brown" />
                   <div className="w-3 h-3 rounded-full bg-brand-brown" />
                   <div className="w-3 h-3 rounded-full bg-brand-soft-blue" />

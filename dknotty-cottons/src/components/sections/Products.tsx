@@ -1,10 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { PRODUCTS } from "@/lib/constants";
 import Image from "next/image";
+
+// Base64 blur placeholder for images
+const BLUR_DATA_URL =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDAwUBAAAAAAAAAAAAAQIDAAQRBRIhBhMiMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/AKOm6hqF1qMUV1qF3LCzYeN5mZWH4QTg1c1C3t7i3aO4t4ZozyUkQMp/iDSlKqsYMoIE5Jz/2Q==";
 
 interface ProductCardProps {
   name: string;
@@ -13,33 +18,42 @@ interface ProductCardProps {
 }
 
 function ProductCard({ name, price, image }: ProductCardProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <Card hover className="overflow-hidden group">
       {/* Product image */}
       <div className="relative aspect-square overflow-hidden bg-brand-beige">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        />
-        {/* Placeholder overlay for missing images */}
-        <div className="absolute inset-0 flex items-center justify-center bg-brand-beige/80">
-          <svg
-            className="w-16 h-16 text-brand-brown/30"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
-          </svg>
-        </div>
+        {!imageError ? (
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          /* Placeholder for missing images */
+          <div className="absolute inset-0 flex items-center justify-center bg-brand-beige">
+            <svg
+              className="w-16 h-16 text-brand-brown/30"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+        )}
       </div>
 
       {/* Product info */}

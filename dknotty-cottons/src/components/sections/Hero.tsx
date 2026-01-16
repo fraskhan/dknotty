@@ -10,7 +10,7 @@ export function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand-cream via-white to-brand-beige"
     >
       {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10" aria-hidden="true">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-brand-light-brown blur-3xl" />
         <div className="absolute top-40 right-20 w-48 h-48 rounded-full bg-brand-soft-blue blur-3xl" />
         <div className="absolute bottom-32 left-1/4 w-40 h-40 rounded-full bg-brand-brown blur-3xl" />
@@ -18,7 +18,7 @@ export function Hero() {
       </div>
 
       {/* Yarn ball decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <svg
           className="absolute -top-10 -right-10 w-64 h-64 text-brand-light-brown opacity-20"
           viewBox="0 0 100 100"
@@ -64,6 +64,7 @@ export function Hero() {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
